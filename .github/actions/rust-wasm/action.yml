@@ -1,0 +1,12 @@
+name: rust-wasm
+description: this is a rust WASM action
+inputs:
+  message:
+    description: user that triggered the workflow
+    default: ${{ github.actor }}
+outputs:
+  result:
+    description: the result of the action
+runs:
+  using: node16
+  main: dist/index.js
